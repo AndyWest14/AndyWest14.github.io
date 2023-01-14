@@ -1,0 +1,135 @@
+//Sección para manejar la aparición del menu lateral
+var visible = "no";
+var bar = document.getElementById("nav-bar");
+bar.onclick = function() {
+    if (visible == "no") {
+        document.getElementById("nav").className = "active";
+        visible = "si";
+    } else {
+        document.getElementById("nav").className = "";
+        visible = "no";
+    }
+}
+
+
+//Detecto el scrolling para cambiar el color de fondo del header cuando se alcanza los 50px
+window.onscroll = function() { scrollFunction() };
+
+function scrollFunction() {
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        document.getElementById("header").style.background = "white";
+        /*document.getElementById("header").style.boxShadow = "2px 2px 10px #ccc";*/
+    } else {
+        document.getElementById("header").style.background = "transparent";
+        document.getElementById("header").style.boxShadow = "none";
+    }
+}
+
+
+//Función que coloca la linea debajo de la opcion seleccionada
+function seleccionar(link) {
+    var opciones = document.querySelectorAll('#links  span');
+    opciones[0].className = "linea";
+    opciones[1].className = "linea";
+    opciones[2].className = "linea";
+    opciones[3].className = "linea";
+    opciones[4].className = "linea";
+    opciones[link].className = "linea seleccionado";
+
+    //Hacemos desaparecer el menu una vez que se ha seleccionado una opcion
+    //en modo responsive
+    var x = document.getElementById("nav");
+    x.className = "";
+
+    //vuelvo la variable visible que maneja el nav-bar a  "no"
+    visible = "no";
+}
+
+
+//Sección Porfolio
+let elementos = document.getElementById("galeria");
+let imgs = elementos.getElementsByTagName("img");
+let proyectos = elementos.getElementsByClassName("proyecto");
+//Función que visualiza los proyectos en base a la categoría elegida
+function cambiarCategoria(categoria, num) {
+    var cat = document.querySelectorAll('#categorias a');
+    cat[0].className = "";
+    cat[1].className = "";
+    cat[2].className = "";
+    cat[num].className = "activada";
+
+    //quitamos todas la clase de las animaciones
+    for (var i = 0; i < imgs.length; i++) {
+        imgs[i].className = "";
+    }
+    //Este código es necesario para que se ejeuta la animación en los proyectos cada vez que se recargen
+    window.requestAnimationFrame(function(time) {
+        window.requestAnimationFrame(function(time) {
+            if (categoria != "all") {
+                for (var i = 0; i < proyectos.length; i++) {
+                    if (proyectos[i].className != "proyecto " + categoria) {
+                        proyectos[i].style.display = "none";
+                    } else {
+                        proyectos[i].style.display = "inline";
+                        imgs[i].className = "animacion";
+                    }
+                }
+            } else {
+                for (var i = 0; i < proyectos.length; i++) {
+                    proyectos[i].style.display = "inline";
+
+                    imgs[i].className = "animacion";
+
+                }
+            }
+        });
+    });
+}
+
+//Esta función visualiza el video
+function verVideo() {
+    var video = document.getElementById("contenedor-video");
+    video.style.display = "block";
+}
+
+//Función que cierra la ventana del video
+function cerrarVideo() {
+    var video = document.getElementById("contenedor-video");
+    video.style.display = "none";
+}
+
+//VENTANAS MODAL DE NOTICIAS
+// Get the modal
+var modalNoticia = document.getElementById("myModal");
+var modalContacto = document.getElementById("myModalContacto");
+
+// Get the button that opens the modal
+var btn = document.getElementById("botonNoticia");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// Función que carga en el iframe el archivo html correspondiente dependiendo de la noticia elegida
+function verNoticia(noticia) {
+    var iframe = document.getElementById("frameNoticia");
+    iframe.src = noticia + ".html";
+    modalNoticia.style.display = "block";
+}
+
+
+
+// Cuando se hace click en Cerrar el modal de la noticia
+function cerrarNoticia() {
+    modalNoticia.style.display = "none";
+}
+
+//Abro la ventana del modal de Contacto
+function abrirContacto() {
+    var contacto = document.getElementById("myModalContacto")
+    contacto.style.display = "block";
+}
+
+//Cierro la ventana Modal de Contacto
+function cerrarContacto() {
+    modalContacto.style.display = "none";
+}

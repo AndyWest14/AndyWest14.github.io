@@ -1,12 +1,141 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Iris Rodriguez</title>
+  <link rel="icon" type="image/x-icon" href="strawberry.png">
+  <link href="index.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-    <h4>TEST</h4>
+  <header id="header">
+    <h1></h1>
+    <nav id="nav">
+      <ul id="links">
+        <li>
+          <a href="#inicio" onclick="seleccionar(0)">Home</a>
+          <span class="linea seleccionado"></span>
+        </li>
+        <li>
+          <a href="#sobremi" onclick="seleccionar(1)">About</a>
+          <span class="linea"></span>
+        </li>
+        <li>
+          <a href="#portfolio" onclick="seleccionar(2)">Portfolio</a>
+          <span class="linea"></span>
+        </li>
+        <li>
+          <a href="#contacto" onclick="seleccionar(4)">Contact</a>
+          <span class="linea"></span>
+        </li>
+      </ul>
+    </nav>
+    <div class="nav-bar" id="nav-bar">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </header>
+
+  <!--Home-->
+  <section id="inicio">
+    <div class="contenedor-img">
+      <div class="imagen"></div>
+    </div>
+    <div class="contenido">
+      <div class="info">
+        <h3>Iris Rodriguez</h3>
+        <span>Automation Tester</span>
+        <div class="redes">
+          <a href="https://www.linkedin.com/in/irisalvarez/"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://github.com/AndyWest14"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.instagram.com/wonka.iris/"><i class="fa-brands fa-instagram"></i></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobremi">
+    <div class="contenido">
+      <div class="left">
+        <div class="contenedor-img">
+          <img src="iris.jpeg" alt="">
+        </div>
+      </div>
+      <div class="right">
+        <div class="info">
+          <span>About me</span>
+          <h3>Hello, my name is Iris, I’m an Automation Tester…</h3>
+          <p>I love projects and topics related to Software Quality, especially Selenium Webdriver and Software
+            development topics with C# and Java</p>
+          <a href="" class="btn-descargar">Download CV</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <div class="contenido">
+      <div class="encabezado-portfolio">
+        <div class="left">
+          <span>Portfolio</span>
+          <h3>My projects</h3>
+        </div>
+        <div class="right" id="categorias">
+          <a href="javascript:void(0)" onclick="cambiarCategoria( 'all',0)" class="activada">All</a>
+          <a href="javascript:void(0)" onclick="cambiarCategoria( 'design',1)">Selenium Webdriver</a>
+          <a href="javascript:void(0)" onclick="cambiarCategoria( 'branding',2)">C#</a></a>
+        </div>
+      </div>
+      <div class="galeria" id="galeria">
+        <div class="proyecto design">
+          <img src="fondo.jpg" alt="">
+          <h3>Project 1</h3>
+        </div>
+        <div class="proyecto design">
+          <img src="fondo.jpg" alt="">
+          <h3>Project 2</h3>
+        </div>
+        <div class="proyecto design">
+          <img src="fondo.jpg" alt="">
+          <h3>Project 3</h3>
+        </div>
+        <div class="proyecto branding">
+          <img src="fondo3.jpg" alt="">
+          <h3>Project 4</h3>
+        </div>
+        <div class="proyecto branding">
+          <img src="fondo3.jpg" alt="">
+          <h3>Project 5</h3>
+        </div>
+        <div class="proyecto branding">
+          <img src="fondo3.jpg" alt="">
+          <h3>Project 6</h3>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+    <!-- Contacto -->
+    <section id="contacto">
+      <div class="background">
+          <div class="info">
+              <h2>If you have any questions you can contact me!</h2>
+              <button onclick="abrirContacto()">Contact me</button>
+          </div>
+      </div>
+  </section>
+
+
+
+
+
+  <script src="script.js"></script>
 </body>
+
 </html>
