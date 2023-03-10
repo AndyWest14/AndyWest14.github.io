@@ -3,6 +3,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
 
+:root{
+    --borderPhoto: #ff7f87;
+    --photoBorderThikness: 18px;
+    --photoBorderSize: 20%;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -13,6 +19,13 @@
 
 html{
     scroll-behavior: smooth;
+}
+
+.typed2{
+    color: #ff7f87 !important;
+    margin-left: 0%;
+    margin-top: 0%;
+    font-size: 40px !important;
 }
 
 /*Header*/
@@ -90,10 +103,10 @@ header nav ul li span.seleccionado{
 
 #inicio .contenido .info{
     position: relative;
-    top: 50%;
-    left: 50%;
-    width: 50%;
-    text-align: center;
+    top: 60%;
+    left:  5%;
+    width: 45%;
+    text-align: left;
     transform: translateY(-50%);
     z-index: 10;
     animation: aparecer 3s forwards;
@@ -110,18 +123,23 @@ header nav ul li span.seleccionado{
     }
 }
 #inicio .contenido .info h3{
-    font-size: 60px;
+    font-size: 40px;
     color: #ff7f87;;
-    padding-left: 2px;
-    letter-spacing: 3px;
+    padding-right: 20%;
+    margin-bottom: 5px;
+}
+#inicio .contenido .info h2{
+    font-size: 45px;
+    color: #000;
+    margin-bottom: 25px;
 }
 
-#inicio .contenido .info span{
+/* #inicio .contenido .info span{
     display:inline-block;
-    font-size: 25px;
+    font-size: 30px;
     color: #000;
     margin-bottom: 15px;
-}
+} */
 
 #inicio .contenido .info .redes a{
     display: inline-block;
@@ -165,6 +183,35 @@ header nav ul li span.seleccionado{
 }
 #sobremi .contenido .left{
     width: 50%;
+
+}
+
+#sobremi .contenido .left .contenedor-img{
+  position: relative;
+}
+
+#sobremi .contenido .left .contenedor-img::before{
+    position:absolute;
+    content: "";
+    left: -3%;
+    top: -3%;
+    width: var(--photoBorderSize);
+    height: var(--photoBorderSize);
+    border-left: var(--photoBorderThikness) solid var(--borderPhoto);
+    border-top: var(--photoBorderThikness) solid var(--borderPhoto);
+    
+}
+
+#sobremi .contenido .left .contenedor-img::after{
+    position:absolute;
+    content: "";
+    right: -3%;
+    bottom: -3%;
+    width: var(--photoBorderSize);
+    height: var(--photoBorderSize);
+    border-bottom: var(--photoBorderThikness) solid var(--borderPhoto);
+    border-right: var(--photoBorderThikness) solid var(--borderPhoto);
+    
 }
 
 #sobremi  .contenido .right{
@@ -173,9 +220,13 @@ header nav ul li span.seleccionado{
 }
 #sobremi .contenido .right .info span{
     display:inline-block;
-    padding: 12px;
-    margin-bottom: 25px;
-    background-color: #ff7f87;
+    padding: 0px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    color: #ff7f87;
+    font-size: 30px;
+    font-weight: 700;
+
 }
 #sobremi .contenido .right .info h3{
     font-size: 30px;
@@ -184,13 +235,15 @@ header nav ul li span.seleccionado{
     margin-bottom: 15px;
 }
 #sobremi .contenido .right .info p{
-    font-size: 15px;
+    font-size: 18px;
     color: #767676;
     line-height: 30px;
     margin-bottom: 15px;
 }
 #sobremi .contenido .right .info .btn-descargar{
     display:inline-block;
+    font-size: 20px;
+    font-style: bold;
     text-decoration: none;
     background-color: #000;
     color: #fff;
@@ -198,18 +251,23 @@ header nav ul li span.seleccionado{
     border: 2px solid #000;
     transition: .5s;
     border-radius: 3px;
+    margin-top: 20px;
 }
 #sobremi .contenido .right .info .btn-descargar:hover{
     background-color: #ff7f87;
-    color: #000;
+    color: black;
 }
+
 #sobremi .contenido .left .contenedor-img img{
     width: 90%;
+    padding: 0px;
+    margin: 20px;
+    border-radius: 3px;
 }
 
 /*portfolio*/
 #portfolio{
-    background-color: #f9f9f9;
+    background-color: white;
 }
 
 #portfolio .contenido {
@@ -236,6 +294,7 @@ header nav ul li span.seleccionado{
     display: inline-block;
     color: #000;
     padding: 5px 15px;
+    margin-bottom: 10px;
 }
 .activada{
     background-color: #ff7f87;
@@ -246,7 +305,7 @@ header nav ul li span.seleccionado{
     font-size: 30px;
     line-height: 1.4;
     font-weight: 700;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
 }
 
 #portfolio .galeria{
@@ -410,20 +469,20 @@ header nav ul li span.seleccionado{
         filter: brightness(.3);
     }
     #inicio .contenido .info {
-        color: #fff;
+        /* color: #fff; */
         width: 100%;
         left: 0;
     }
     #inicio .contenido .info h3 {
-        color: #fff;
+        /* color: #fff; */
         -webkit-text-stroke: 0px;
         padding-left: 2px;
     }
     #inicio .contenido .info span {
-        color: #fff;
+        /* color: #fff; */
     }
     #inicio .contenido .info .redes a i{
-        color: #fff;
+        /* color: #fff; */
     }
     /* sobre mi */
     #sobremi .contenido {

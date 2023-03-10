@@ -10,7 +10,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+
+  </head>
 
 <body>
   <header id="header">
@@ -42,13 +43,15 @@
 
   <!--Home-->
   <section id="inicio">
-    <div class="contenedor-img">
-      <div class="imagen"></div>
-    </div>
+    <!-- <div class="contenedor-img">
+      <div class="imagen">
+        <img src="iris.jpeg" alt="">
+      </div>
+    </div> -->
     <div class="contenido">
-      <div class="info">
-        <h3>Iris Rodriguez</h3>
-        <span>Automation Tester</span>
+      <div class="info" id="typed-strings">
+        <h3>Hello,</h3>
+        <h2>I'm a <span class="typed2"></span></h2>
         <div class="redes">
           <a href="https://www.linkedin.com/in/irisalvarez/"><i class="fa-brands fa-linkedin-in"></i></a>
           <a href="https://github.com/AndyWest14"><i class="fa-brands fa-github"></i></a>
@@ -68,7 +71,7 @@
       <div class="right">
         <div class="info">
           <span>About me</span>
-          <h3>Hello, my name is Iris, I’m an Automation Tester…</h3>
+          <!-- <h3> I’m an Automation Tester…</h3> -->
           <p>I love projects and topics related to Software Quality, especially Selenium Webdriver and Software
             development topics with C# and Java</p>
           <a href="" class="btn-descargar">Download CV</a>
@@ -81,7 +84,7 @@
     <div class="contenido">
       <div class="encabezado-portfolio">
         <div class="left">
-          <span>Portfolio</span>
+          <!-- <span>Portfolio</span> -->
           <h3>My projects</h3>
         </div>
         <div class="right" id="categorias">
@@ -132,10 +135,21 @@
   </section>
 
 
-
-
-
   <script src="script.js"></script>
+  <script src="typed.js-master/lib/typed.js"></script>
+  <script>
+       var typed2 = new Typed('.typed2', {
+    strings: ['QA Engineer',
+      '.Net Developer', 
+      'Computer systems engineer'
+    ],
+    typeSpeed: 100,
+    backSpeed: 100,
+    backDelay: 200,
+    loop: true
+
+  });
+  </script>
 </body>
 
 </html>
