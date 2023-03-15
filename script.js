@@ -1,7 +1,7 @@
 //Sección para manejar la aparición del menu lateral
 var visible = "no";
 var bar = document.getElementById("nav-bar");
-bar.onclick = function() {
+bar.onclick = function () {
     if (visible == "no") {
         document.getElementById("nav").className = "active";
         visible = "si";
@@ -13,7 +13,7 @@ bar.onclick = function() {
 
 
 //Detecto el scrolling para cambiar el color de fondo del header cuando se alcanza los 50px
-window.onscroll = function() { scrollFunction() };
+window.onscroll = function () { scrollFunction() };
 
 function scrollFunction() {
     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
@@ -63,8 +63,8 @@ function cambiarCategoria(categoria, num) {
         imgs[i].className = "";
     }
     //Este código es necesario para que se ejeuta la animación en los proyectos cada vez que se recargen
-    window.requestAnimationFrame(function(time) {
-        window.requestAnimationFrame(function(time) {
+    window.requestAnimationFrame(function (time) {
+        window.requestAnimationFrame(function (time) {
             if (categoria != "all") {
                 for (var i = 0; i < proyectos.length; i++) {
                     if (proyectos[i].className != "proyecto " + categoria) {
@@ -86,50 +86,26 @@ function cambiarCategoria(categoria, num) {
     });
 }
 
-//Esta función visualiza el video
-function verVideo() {
-    var video = document.getElementById("contenedor-video");
-    video.style.display = "block";
+// function scrollToTop() {
+//     window.scrollTo(0, 0);
+// }
+
+// Get the button:
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () { scrollFunction() };
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
 }
 
-//Función que cierra la ventana del video
-function cerrarVideo() {
-    var video = document.getElementById("contenedor-video");
-    video.style.display = "none";
-}
-
-//VENTANAS MODAL DE NOTICIAS
-// Get the modal
-var modalNoticia = document.getElementById("myModal");
-var modalContacto = document.getElementById("myModalContacto");
-
-// Get the button that opens the modal
-var btn = document.getElementById("botonNoticia");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// Función que carga en el iframe el archivo html correspondiente dependiendo de la noticia elegida
-function verNoticia(noticia) {
-    var iframe = document.getElementById("frameNoticia");
-    iframe.src = noticia + ".html";
-    modalNoticia.style.display = "block";
-}
-
-
-
-// Cuando se hace click en Cerrar el modal de la noticia
-function cerrarNoticia() {
-    modalNoticia.style.display = "none";
-}
-
-//Abro la ventana del modal de Contacto
-function abrirContacto() {
-    var contacto = document.getElementById("myModalContacto")
-    contacto.style.display = "block";
-}
-
-//Cierro la ventana Modal de Contacto
-function cerrarContacto() {
-    modalContacto.style.display = "none";
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }

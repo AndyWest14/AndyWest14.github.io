@@ -5,13 +5,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Inicio | @Iris Rodriguez</title>
-  <link rel="icon" type="image/x-icon" href="strawberry.png">
+  <link rel="icon" type="image/x-icon" href="assets/strawberry.png">
   <link href="index.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  </head>
+</head>
 
 <body>
   <header id="header">
@@ -45,7 +46,7 @@
   <section id="inicio">
     <div class="contenido">
       <div class="info" id="typed-strings">
-        <h3>Hello, My name is Iris</h3>
+        <h3>Hello,</h3>
         <h2>I'm a <span class="typed2"></span></h2>
         <div class="redes">
           <a href="https://www.linkedin.com/in/irisalvarez/"><i class="fa-brands fa-linkedin-in"></i></a>
@@ -56,25 +57,30 @@
     </div>
     <div class="contenedor-img-home">
       <div class="imagen-home">
-        <img src="photo.png" alt="">
+        <img src="assets/photo.png" alt="">
+      </div>
+      <div id="section-1">
+        <a id="scroll-btn" href="#sobremi"></a>
       </div>
     </div>
   </section>
 
-  <section id="sobremi">
+
+  <section id="sobremi" style="margin-top: 20px;">
     <div class="contenido">
       <div class="left">
         <div class="contenedor-img">
-          <img src="iris.jpeg" alt="">
+          <img src="assets/iris.jpeg" alt="">
         </div>
       </div>
       <div class="right">
         <div class="info">
           <span>About me</span>
           <!-- <h3> I’m an Automation Tester…</h3> -->
-          <p>I love projects and topics related to Software Quality, especially Selenium Webdriver and Software
-            development topics with C# and Java</p>
-          <a href="" class="btn-descargar">Download CV</a>
+          <p>Hello, My name is Iris. I love projects and topics related to Software Quality, especially Selenium
+            Webdriver and Software
+            development topics with C# and Java.</p>
+          <a href="assets/Profile.pdf" download="CV-Iris Rodriguez" class="btn-descargar">Download CV</a>
         </div>
       </div>
     </div>
@@ -84,71 +90,99 @@
     <div class="contenido">
       <div class="encabezado-portfolio">
         <div class="left">
-          <!-- <span>Portfolio</span> -->
           <h3>My projects</h3>
         </div>
         <div class="right" id="categorias">
           <a href="javascript:void(0)" onclick="cambiarCategoria( 'all',0)" class="activada">All</a>
-          <a href="javascript:void(0)" onclick="cambiarCategoria( 'design',1)">Selenium Webdriver</a>
-          <a href="javascript:void(0)" onclick="cambiarCategoria( 'branding',2)">C#</a></a>
+          <a href="javascript:void(0)" onclick="cambiarCategoria( 'design',1)">Web browser automation</a>
+          <a href="javascript:void(0)" onclick="cambiarCategoria( 'branding',2)">Mobile automation</a></a>
         </div>
       </div>
       <div class="galeria" id="galeria">
         <div class="proyecto design">
-          <img src="fondo.jpg" alt="">
+          <img src="assets/fondo.jpg" alt="">
           <h3>Project 1</h3>
         </div>
         <div class="proyecto design">
-          <img src="fondo.jpg" alt="">
+          <img src="assets/fondo.jpg" alt="">
           <h3>Project 2</h3>
         </div>
         <div class="proyecto design">
-          <img src="fondo.jpg" alt="">
+          <img src="assets/fondo.jpg" alt="">
           <h3>Project 3</h3>
         </div>
         <div class="proyecto branding">
-          <img src="fondo3.jpg" alt="">
+          <img src="assets/fondo3.jpg" alt="">
           <h3>Project 4</h3>
         </div>
         <div class="proyecto branding">
-          <img src="fondo3.jpg" alt="">
+          <img src="assets/fondo3.jpg" alt="">
           <h3>Project 5</h3>
         </div>
         <div class="proyecto branding">
-          <img src="fondo3.jpg" alt="">
+          <img src="assets/fondo3.jpg" alt="">
           <h3>Project 6</h3>
         </div>
 
 
       </div>
+
     </div>
   </section>
 
-    <!-- Contacto -->
-    <section id="contacto">
-      <div class="background">
-          <div class="info">
-              <h2>If you have any questions you can contact me!</h2>
-              <button onclick="abrirContacto()">Contact me</button>
+  <!-- Contacto -->
+  <section id="contacto">
+    <div class="background">
+      <div class="info">
+        <h2>If you have any questions you can contact me!</h2>
+        <div class="contact-form">
+          <form action="https://formspree.io/f/myyapkoa" method="POST">
+            <label>Your email: </label>
+            <input type="email" name="email" required="required" placeholder="&#xf0e0;  Email"
+              style="font-family:Arial, FontAwesome">
+            <label>Your message: </label>
+            <textarea name="message" required="required" placeholder=" Message" style="resize: none;"></textarea>
+            <button class="btn-contactar" type="submit">
+              Send <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+          <div class="contact-image">
+            <img src="assets/strawberry-phone.jpg" alt="">
           </div>
+        </div>
       </div>
+    </div>
   </section>
 
+  <div id="myBtn" onclick="topFunction()" class="scrollTop"><i class="fa-solid fa-arrow-up"></i></div>
 
   <script src="script.js"></script>
   <script src="typed.js-master/lib/typed.js"></script>
   <script>
-       var typed2 = new Typed('.typed2', {
-    strings: ['QA Engineer',
-      '.Net Developer'
-    ],
-    typeSpeed: 50,
-    backSpeed: 100,
-    backDelay: 100,
-    loop: true
+    var typed2 = new Typed('.typed2', {
+      strings: ['QA Engineer',
+        '.Net Developer'
+      ],
+      typeSpeed: 50,
+      backSpeed: 100,
+      backDelay: 100,
+      loop: true
 
-  });
+    });
   </script>
+
+
 </body>
+
+<footer>
+  <div class="info-footer">
+    <p>Made with <img src="/assets/strawberry.png"></p>
+    <div class="redes-footer">
+      <a href="https://www.linkedin.com/in/irisalvarez/"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://github.com/AndyWest14"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.instagram.com/andy.west14"><i class="fa-brands fa-instagram"></i></i></a>
+    </div>
+  </div>
+</footer>
 
 </html>
