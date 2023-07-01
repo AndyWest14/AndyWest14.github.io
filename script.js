@@ -18,7 +18,7 @@ window.onscroll = function () { scrollFunction() };
 function scrollFunction() {
     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
         document.getElementById("header").style.background = "white";
-        /*document.getElementById("header").style.boxShadow = "2px 2px 10px #ccc";*/
+        document.getElementById("header").style.boxShadow = "2px 2px 10px #ccc";
     } else {
         document.getElementById("header").style.background = "transparent";
         document.getElementById("header").style.boxShadow = "none";
