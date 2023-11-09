@@ -135,7 +135,7 @@ header nav ul li span.seleccionado {
 }
 
 #inicio .contenido .info h2 {
-    font-size: 45px;
+    font-size: 50px;
     color: #000;
     margin-bottom: 35px;
 }
@@ -175,10 +175,10 @@ header nav ul li span.seleccionado {
 }
 
 #inicio .contenedor-img-home .imagen-home img {
-    width: 45%;
+    width: 50%;
     object-fit: contain;
     margin-left: 6%;
-    border-radius: 900px;
+    border-radius: 800px;
 }
 
 
@@ -402,6 +402,7 @@ header nav ul li span.seleccionado {
 
 #contacto .background .info h2 {
     font-size: 50px;
+    margin-bottom: 1%;
     color: #1d1d1d;
 }
 
@@ -420,7 +421,7 @@ header nav ul li span.seleccionado {
     display: grid;
     grid-template-columns: 1fr;
     width: 500px;
-    margin-left: 25%;
+    margin-left: 30%;
     margin-top: -10%;
 }
 
@@ -428,7 +429,7 @@ header nav ul li span.seleccionado {
     gap: 10px;
     padding: 5px;
     font-size: 18px;
-    margin: 25px 0px 10px 0px;
+    margin: 35px 0px 10px 0px;
     text-align: left;
 }
 
